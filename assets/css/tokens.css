@@ -1,0 +1,66 @@
+/* Дизайн-токены ALEX Resort & Spa Apartments (по брендбуку) */
+:root {
+  /* Палитра бренда */
+  --navy: #233c57;
+  --navy-deep: #0a2239;
+  --navy-ink: #16293e;
+  --sea: #1f7396;
+  --aqua: #51a1b4;
+  --aqua-soft: #a4d1d0;
+  --gold: #b59779;
+  --gold-light: #d5bfa2;
+  --gold-pale: #ead3b2;
+  --gold-deep: #8c7053;
+  --sand: #f2ebe1;
+  --paper: #faf7f2;
+  --white: #ffffff;
+
+  /* Семантика */
+  --text: var(--navy);
+  --text-muted: #5b6b7c;
+  --text-on-dark: #f4efe8;
+  --text-on-dark-muted: rgba(244, 239, 232, 0.72);
+  --line: rgba(35, 60, 87, 0.14);
+  --line-strong: rgba(35, 60, 87, 0.28);
+  --line-on-dark: rgba(244, 239, 232, 0.18);
+  --error: #b3412f;
+  --focus: var(--sea);
+
+
+  /* Типографика */
+  --font-serif: "Lora", "Georgia", "Times New Roman", serif;
+  --font-sans: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1.0625rem;
+  --fs-md: 1.1875rem;
+  --fs-lg: clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);
+  --fs-h3: clamp(1.25rem, 1.15rem + 0.35vw, 1.4375rem);
+  --fs-h2: clamp(2rem, 1.45rem + 1.9vw, 3.125rem);
+  --fs-h1: clamp(2.125rem, 1.3rem + 3.6vw, 4.5rem);
+
+  /* Отступы и сетка */
+  --gutter: clamp(16px, 4vw, 48px);
+  --container: 1320px;
+  --section-y: clamp(72px, 5rem + 3vw, 136px);
+  --radius-sm: 4px;
+  --radius: 6px;
+  --radius-lg: 10px;
+
+  --shadow-card: 0 1px 2px rgba(10, 34, 57, 0.04), 0 12px 32px -12px rgba(10, 34, 57, 0.16);
+  --shadow-float: 0 24px 64px -24px rgba(10, 34, 57, 0.45);
+
+  /* Движение */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 180ms;
+  --dur: 320ms;
+  --dur-slow: 640ms;
+
+  --header-h: 108px;
+}
+
+@media (max-width: 1199px) {
+  :root { --header-h: 64px; }
+}
