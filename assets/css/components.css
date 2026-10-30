@@ -211,7 +211,8 @@
 
 /* ---------- Fancybox в цветах ALEX ---------- */
 .fancybox__container {
-  --fancybox-bg: rgba(8, 24, 41, 0.96);
+  --fancybox-backdrop-bg: rgba(6, 19, 33, 0.94);
+  --fancybox-backdrop-filter: blur(8px);
   --f-button-color: var(--text-on-dark);
   --f-button-hover-color: var(--navy-deep);
   --f-button-bg: rgba(10, 34, 57, 0.55);
@@ -228,6 +229,41 @@
   font-family: var(--font-sans);
 }
 .fancybox__counter { font-family: var(--font-sans); color: var(--gold-light); }
+/* Видео во Fancybox: широкий экран 16:9 со скруглением, глубокой тенью и тонкой золотистой рамкой */
+.fancybox__container .has-html5video .f-html {
+  /* ширина ограничена и экраном, и высотой окна — кадр всегда ровно 16:9, без чёрных полос */
+  --f-video-width: min(1280px, 92vw, calc(76vh * 16 / 9));
+  --f-video-height: calc(min(1280px, 92vw, calc(76vh * 16 / 9)) * 9 / 16);
+  --f-video-aspect-ratio: 16 / 9;
+  --f-video-bg: #000;
+  /* без overflow: hidden — иначе обрезается крестик, который Fancybox ставит над кадром */
+  border-radius: 12px;
+  box-shadow: 0 0 0 1px rgba(213, 191, 162, 0.28), 0 40px 90px -30px rgba(0, 0, 0, 0.85);
+}
+.fancybox__container .f-html5video { display: block; width: 100%; height: 100%; object-fit: contain; background: #000; border-radius: inherit; }
+.alex-video .fancybox__caption { max-width: 60ch; margin-inline: auto; padding-top: 18px; text-align: center; color: var(--text-on-dark-muted); }
+/* Крестик закрытия видео: круглый, над правым верхним углом кадра, золотой при наведении */
+.alex-video .is-close-button {
+  --f-button-width: 44px;
+  --f-button-height: 44px;
+  --f-button-svg-width: 20px;
+  --f-button-svg-height: 20px;
+  --f-button-svg-stroke-width: 2;
+  --f-button-bg: rgba(244, 239, 232, 0.14);
+  --f-button-color: var(--white);
+  --f-button-hover-bg: var(--gold);
+  --f-button-hover-color: var(--navy-deep);
+  --f-button-border-radius: 50%;
+  top: -56px;
+  right: 0;
+  border: 1px solid rgba(244, 239, 232, 0.4);
+  border-radius: 50%;
+  opacity: 1;
+  visibility: visible;
+}
+@media (max-width: 767px) {
+  .fancybox__container .has-html5video .f-html { border-radius: 8px; }
+}
 /* Планировки на белой подложке, чтобы чёрные линии читались на тёмном фоне */
 .fancybox__slide img[src*="/plans/"] { background: var(--white); }
 

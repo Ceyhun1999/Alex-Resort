@@ -7,11 +7,12 @@ import { initGallery } from './modules/gallery.js';
 import { initFloors } from './modules/floors.js';
 import { initTabs } from './modules/tabs.js';
 import { initHeroVideo } from './modules/hero-video.js';
-import { initSectionVideos } from './modules/section-video.js';
 import { initCopyMax } from './modules/copy-max.js';
 import { initAnimations } from './modules/animations.js';
 import { initFloating } from './modules/floating.js';
 import { initContactFab } from './modules/contact-fab.js';
+import { initFooterWaves } from './modules/footer-waves.js';
+import { initFooterSea } from './modules/footer-sea.js';
 import { initCursorTrail } from './modules/cursor-trail.js';
 import { initSmoothScroll } from './modules/smooth-scroll.js';
 import { CURSOR_TRAIL, SMOOTH_SCROLL } from './config.js';
@@ -33,8 +34,9 @@ initFloors();
 initCopyMax();
 initFloating();
 initContactFab();
+initFooterWaves();
+initFooterSea();
 initHeroVideo();
-initSectionVideos();
 
 if (CURSOR_TRAIL.enabled) {
   const { enabled, ...trailOptions } = CURSOR_TRAIL;

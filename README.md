@@ -2,6 +2,45 @@
 
 Статический сайт: HTML + CSS + ES-модули, GSAP 3.13 (локально в `assets/js/vendor`). Сборка не нужна.
 
+
+## Скриншоты (desktop, 1440 × 900)
+
+### Первый экран
+
+![Первый экран](docs/screenshots/01-top.jpg)
+
+### О проекте
+
+![О проекте](docs/screenshots/02-about.jpg)
+
+### Преимущества
+
+![Преимущества](docs/screenshots/03-benefits.jpg)
+
+### Апартаменты
+
+![Апартаменты](docs/screenshots/04-apartments.jpg)
+
+### Инфраструктура
+
+![Инфраструктура](docs/screenshots/05-infrastructure.jpg)
+
+### Инвестиции
+
+![Инвестиции](docs/screenshots/06-investments.jpg)
+
+### Галерея
+
+![Галерея](docs/screenshots/07-gallery.jpg)
+
+### Документы
+
+![Документы](docs/screenshots/08-documents.jpg)
+
+### Подвал и контакты
+
+![Подвал и контакты](docs/screenshots/09-contacts.jpg)
+
 ## Запуск
 
 ```bash
@@ -64,3 +103,13 @@ Lenis обновляется от `gsap.ticker` (один цикл анимац�
 «Заявка не отправлена» с телефоном и ссылкой WhatsApp (текст заявки подставляется).
 Чтобы подключить бэкенд, укажите URL в `assets/js/config.js` — интерфейс менять не нужно.
 Тело запроса: `{ name, phone (E.164), message?, interest?, source, page }`.
+
+## Сторонние материалы и лицензии
+
+На самом сайте эти сведения не выводятся, они нужны при запуске:
+
+- **Иконки WhatsApp и Telegram** — Flaticon Uicons (`@flaticon/flaticon-uicons` 3.3.1). Бесплатная лицензия Flaticon
+  требует ссылку на автора; без неё нужна подписка Flaticon Premium либо замена иконок.
+- **Fancybox 6.1.15** — лицензия Fancyapps; для коммерческого сайта нужна платная лицензия (fancyapps.com/pricing).
+- **Lenis 1.3.26** — MIT. **GSAP 3.13** — стандартная лицензия GreenSock, бесплатна и для коммерческих сайтов.
+- **Иконка MAX** — по изображению Max_Messenger_Symbol_3D, предоставленному заказчиком.
